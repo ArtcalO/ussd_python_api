@@ -30,4 +30,4 @@ def uss_callback(request):
 
     elif text =="1*2":
             menu_text = "END Your BALANCE  is KES 120/-"
-    response = Response(menu_text,200)
+    return Response(menu_text,200)
