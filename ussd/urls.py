@@ -4,7 +4,7 @@ from django.conf.urls.static import static
 from django.views.generic import TemplateView
 from . import settings
 
-admin.site.site_header = 'ANYPAY'
+admin.site.site_header = 'USSD'
 admin.site.index_title = 'Zone Dangereuse'
 admin.site.site_title = 'Administration'
 
