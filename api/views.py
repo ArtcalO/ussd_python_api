@@ -12,24 +12,26 @@ def uss_callback(request):
 
     #serve menus based on text
     if text == "":
-        menu_text = "CON What would you want to check \n"
-        menu_text += "1. My Account \n"
-        menu_text += "2. My phone number \n"
-        menu_text += "3. My branch"
+        menu_text = "CON Kaze kuri HOGI \n"
+        menu_text += "1. Ikonte yawe\n"
+        menu_text += "2. Nomero yanje \n"
+        menu_text += "3. Ubufasha"
 
     elif text =="1":
-        menu_text = "CON Choose the account information that you want to view \n"
-        menu_text += "1. My Account balance\n"
-        menu_text += "2. My Account number \n"
+        menu_text = "CON Cagura ivyo ushaka kuraba \n"
+        menu_text += "1. Ubutunzi bwanje\n"
+        menu_text += "2. Nomero ya konti yanje \n"
 
     elif text =="2":
-        menu_text = "END Your phone number is "+phoneNumber
+        menu_text = "END Inomero ya phone yawe : "+phoneNumber
 
     elif text =="1*1":
-        menu_text = "END Your account number is ACOO10SWO2101."
+        menu_text = "END Ubutunzi bwanyu ni : 200 000 Fbu"
 
     elif text =="1*2":
-            menu_text = "END Your BALANCE  is KES 120/-"
+            menu_text = "END Inomero ya konti yawe : HO-A10219-GI."
+
+    elif text =="3":
+            menu_text = "Ja kuri https://hogi.bi."
 
     return HttpResponse(menu_text, content_type = 'text/plain')
- 
