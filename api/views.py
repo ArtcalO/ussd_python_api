@@ -32,6 +32,6 @@ def uss_callback(request):
             menu_text = "END Inomero ya konti yawe : HO-A10219-GI."
 
     elif text =="3":
-            menu_text = "Ja kuri https://hogi.bi."
+            menu_text = "END Ja kuri https://hogi.bi."
 
     return HttpResponse(menu_text, content_type = 'text/plain')
