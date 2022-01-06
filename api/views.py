@@ -12,8 +12,10 @@ def uss_callback(request):
 
     #serve menus based on text
     if text == "":
-
-        menu_text = "CON "+"What would you want to check \n"
+        menu_text = "CON What would you want to check \n"
+        menu_text += "1. My Account \n"
+        menu_text += "2. My phone number \n"
+        menu_text += "3. My branch"
 
     elif text =="1":
         menu_text = "CON Choose the account information that you want to view \n"
@@ -29,4 +31,5 @@ def uss_callback(request):
     elif text =="1*2":
             menu_text = "END Your BALANCE  is KES 120/-"
 
-    return Response(menu_text, 200)
+    return HttpResponse(menu_text, content_type = 'text/plain')
+ 
