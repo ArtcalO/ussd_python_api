@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from django.http import HttpResponse
 
 @api_view(['POST'])
 def uss_callback(request):
@@ -9,6 +8,7 @@ def uss_callback(request):
     serviceCode = request.data.get("serviceCode", None)
     phoneNumber = request.data.get("phoneNumber", None)
     text = request.data.get("text", None)
+    menu_text=""
 
     #serve menus based on text
     if text == "":
@@ -30,4 +30,4 @@ def uss_callback(request):
 
     elif text =="1*2":
             menu_text = "END Your BALANCE  is KES 120/-"
-    return Response(menu_text,status=200,content_type="text/plain")
+    response = Response(menu_text,200)
