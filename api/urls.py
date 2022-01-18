@@ -4,4 +4,5 @@ from .views import *
 
 urlpatterns = [
     path('', uss_callback, name="ussd"),
+    path('/transfert', transfert_callback, name="ussd"),
 ]
